@@ -68,7 +68,15 @@ Disallow: /')
   	end
   end
 
+  desc "create WebPay symlinks"
+  task :webpay_symlinks do 
+    on roles(:app) do
+      execute :ln, "-nfs #{shared_path}/cgi-bin #{release_path}/"
+    end
+  end
+
   after :finished, :create_robots
+  after :create_robots, :webpay_symlinks
   after :finishing, "deploy:cleanup"
 
 end
