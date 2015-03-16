@@ -3,7 +3,7 @@
 ############################################
 
 set :stage, :production
-set :stage_url, "http://wheele.kongo.cl"
+set :stage_url, "http://wheelie.kongo.cl"
 server "kongo.cl", user: "ubuntu", roles: %w{web app db}
 set :deploy_to, "/var/www/html/wheelie"
 
