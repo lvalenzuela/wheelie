@@ -74,7 +74,7 @@ Disallow: /')
       execute :ln, "-nfs #{shared_path}/cgi-bin #{release_path}/"
       execute :chmod, "555 #{release_path}/cgi-bin"
       execute :chmod, "224 #{release_path}/cgi-bin/datos"
-      execute :chmod, "444 #{release_path}/cgi-bin/log"
+      execute :chmod, "224 #{release_path}/cgi-bin/log"
       execute :chmod, "224 #{release_path}/cgi-bin/maestros"
       execute :chmod, "224 #{release_path}/cgi-bin/template"
     end
