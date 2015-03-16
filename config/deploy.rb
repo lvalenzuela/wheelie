@@ -72,7 +72,7 @@ Disallow: /')
   task :webpay_symlinks do 
     on roles(:app) do
       execute :ln, "-nfs #{shared_path}/cgi-bin #{release_path}/"
-      execute :chmod, "111 #{release_path}/cgi-bin"
+      execute :chmod, "644 #{release_path}/cgi-bin"
       execute :chmod, "224 #{release_path}/cgi-bin/datos"
       #execute :chmod, "224 #{release_path}/cgi-bin/log"
       execute :chmod, "224 #{release_path}/cgi-bin/maestros"
